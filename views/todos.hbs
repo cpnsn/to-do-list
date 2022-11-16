@@ -1,11 +1,14 @@
-<div id="btnListsDiv">
-  <div><button class="addListBtn" style="float:right">New list</button></div>
+<form action="/list" method="post">
+  <div id="btnListsDiv">
+    <input type="text" name="title" />
+    <div><button class="addListBtn" style="float:right">New list</button></div>
 
-  <div id="listsDiv">
-
-{{#each allLists}}
+  </div>
+</form>
+<div id="listsDiv">
+  {{#each allLists}}
     <div class="list-card">
-      <h1>{{this.title}}</h1>
+      <h2>{{this.title}}</h2>
 
       <div class="dropdown">
         <form action="/todos/{{this._id}}" method="POST">
@@ -26,38 +29,39 @@
       <a href="#">Link 3</a>
     </div> }}
 
-        <ul class="unList" id="unorderedList1">
+        <ul class="unList">
           {{#each this.todos}}
             {{!-- {{#if (compare this.timeFormat "daily" "===")}} --}}
-              <div>
-                <li class="todoList">
-                  | {{content}}
-                </li>
-                <a href="/todos/{{this._id}}/delete"><img
-                    class="icons"
-                    src="/images/delete.png"
-                    alt=""
-                  /></a>
-                  {{!-- <a href="/todos/{{this._id}}/update"><img
+            <div>
+              <li class="todoList">
+                |
+                {{content}}
+              </li>
+              <a href="/todos/{{this._id}}/delete"><img
+                  class="icons"
+                  src="/images/delete.png"
+                  alt=""
+                /></a>
+              {{!-- <a href="/todos/{{this._id}}/update"><img
                     class="icons"
                     src="/images/edit.png"
                     alt=""
                   /></a> --}}
-                <a href="/todos/{{this._id}}/update"><img
-                    class="icons"
-                    src="/images/done.png"
-                    alt=""
-                  /></a>
-              </div>
+              <a href="/todos/{{this._id}}/update"><img
+                  class="icons"
+                  src="/images/done.png"
+                  alt=""
+                /></a>
+            </div>
             {{!-- {{/if}} --}}
           {{/each}}
         </ul>
-        <a href="">Delete {{this.title}} List</a>
+        <a href="/list/{{this._id}}/delete">Delete list</a>
       </div>
     </div>
-    {{/each}}
+  {{/each}}
 
-    {{!-- <div id="dailyDiv">
+  {{!-- <div id="dailyDiv">
       <h1>WEEKLY</h1>
 
       <div class="dropdown">
@@ -189,20 +193,16 @@
       </div>
     </div> --}}
 
+  <div class="list-card">
+    <h2>Done Tasks</h2>
 
-    <div class="list-card">
-      <h1>Done Tasks</h1> 
+    {{#each doneTasks}}
+      <div id="doneTasks">
+        <span> | </span>{{content}}<span> | </span>
+      </div>
 
-      {{#each doneTasks}}
-       
-       {{content}} | 
-       
-      {{/each}}
+    {{/each}}
 
-      <a href="">empty done tasks</a>
-    </div>
-
-    </div>
-
+    <a href="">empty done tasks</a>
   </div>
 </div>

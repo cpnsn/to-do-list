@@ -24,12 +24,13 @@ router.get("/", isLoggedIn, async (req, res) => {
   });
 });
 
-router.get("/:id([a-f0-9]{24,})", async (req, res, next) => {
-  const { id } = req.params;
-  const oneTodo = await Todo.findById(id);
-  res.render("oneTodo", { oneTodo });
-});
+// router.get("/:id([a-f0-9]{24,})", async (req, res, next) => {
+//   const { id } = req.params;
+//   const oneTodo = await Todo.findById(id);
+//   res.render("oneTodo", { oneTodo });
+// });
 
+//ajouter todo à une liste
 router.post("/:id", async (req, res, next) => {
   const { content } = req.body;
   const id = req.params.id;

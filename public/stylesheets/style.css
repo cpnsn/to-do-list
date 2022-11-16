@@ -260,18 +260,14 @@ h2 {
   display: flex;
   /* justify-content: center; */
   width: 25%;
-  height: 50%;
+  /* height: 50%; */
   margin: 3em;
   margin-top: 1em;
   background-color: rgb(245, 251, 240);
-
   flex-direction: column;
-
   padding: 10px;
   gap: 10px;
-
   background: rgb(245, 251, 240);
-
   box-shadow: 1px 2px 4px 2px rgba(41, 41, 41, 0.08);
   border-radius: 15px;
   background: #fffefe;
@@ -295,6 +291,7 @@ h2 {
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .addListBtn {
@@ -305,7 +302,7 @@ h2 {
 #listsDiv,
 #btnListsDiv {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -318,10 +315,7 @@ h2 {
 
 .todoList {
   margin-bottom: 1em;
-}
-
-h1 {
-  color: rgb(114, 110, 110);
+  margin-left: 2em;
 }
 
 .addTaskBtn {
@@ -334,32 +328,28 @@ h1 {
   align-items: center; */
   padding: 14px;
   gap: 5px;
-
   /* display: block; */
-  margin: 2em 2em 0 0;
-
-  width: 200px;
-  height: 44px;
-
+  margin: 0 auto;
+  max-width: 200px;
+  height: 2.8rem;
   background: #ffffff;
-
   border: 3px solid #decffb;
   border-radius: 8px;
-
-  flex: none;
-  order: 1;
+  /* flex: none; */
+  /* order: 1; */
   align-self: stretch;
-  flex-grow: 0;
+  /* flex-grow: 0; */
 }
 
-li,
 .addTaskInput {
-  margin-left: 2em;
+  /* margin-left: 2em; */
 }
 
-h1 {
+h2 {
   margin-left: 0.5em;
   margin-top: 0.2em;
+  color: rgb(114, 110, 110);
+  font-size: 2.5rem;
 }
 
 #imgHomepage {
@@ -400,4 +390,19 @@ h1 {
 #h1HPDiv {
   display: flex;
   justify-content: center;
+}
+
+#doneTasks {
+  display: inline-block;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.dropdown form {
+  display: flex;
+  gap: 2rem;
 }
