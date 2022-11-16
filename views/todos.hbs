@@ -1,0 +1,208 @@
+<div id="btnListsDiv">
+  <div><button class="addListBtn" style="float:right">New list</button></div>
+
+  <div id="listsDiv">
+
+{{#each allLists}}
+    <div class="list-card">
+      <h1>{{this.title}}</h1>
+
+      <div class="dropdown">
+        <form action="/todos/{{this._id}}" method="POST">
+          <input
+            class="addTaskInput"
+            type="text"
+            name="content"
+            placeholder=" Name your task"
+          />
+          <button class="addTaskBtn">Add task</button>
+          {{! <p contenteditable="true">Hzy</p> }}
+        </form>
+
+        {{! <button id="btn" class="dropbtn">Select daily habits</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div> }}
+
+        <ul class="unList" id="unorderedList1">
+          {{#each this.todos}}
+            {{!-- {{#if (compare this.timeFormat "daily" "===")}} --}}
+              <div>
+                <li class="todoList">
+                  | {{content}}
+                </li>
+                <a href="/todos/{{this._id}}/delete"><img
+                    class="icons"
+                    src="/images/delete.png"
+                    alt=""
+                  /></a>
+                  {{!-- <a href="/todos/{{this._id}}/update"><img
+                    class="icons"
+                    src="/images/edit.png"
+                    alt=""
+                  /></a> --}}
+                <a href="/todos/{{this._id}}/update"><img
+                    class="icons"
+                    src="/images/done.png"
+                    alt=""
+                  /></a>
+              </div>
+            {{!-- {{/if}} --}}
+          {{/each}}
+        </ul>
+        <a href="">Delete {{this.title}} List</a>
+      </div>
+    </div>
+    {{/each}}
+
+    {{!-- <div id="dailyDiv">
+      <h1>WEEKLY</h1>
+
+      <div class="dropdown">
+        <form action="/todos/weekly" method="POST">
+          <input
+            class="addTaskInput"
+            type="text"
+            name="content"
+            placeholder=" Name your task"
+          />
+          <button class="addTaskBtn">Add task</button>
+        </form>
+
+        <ul class="unList" id="unorderedList2">
+          {{#each allTodos}}
+            {{#if (compare this.timeFormat "weekly" "===")}}
+              <div>
+                <li class="todoList">
+                  | {{content}}
+                </li>
+                <a href="/todos/{{this._id}}/delete"><img
+                    class="icons"
+                    src="/images/delete.png"
+                    alt=""
+                  /></a>
+                  <a href="/todos/{{this._id}}/update"><img
+                    class="icons"
+                    src="/images/edit.png"
+                    alt=""
+                  /></a>
+                <a href="/todos/{{this._id}}/update"><img
+                    class="icons"
+                    src="/images/done.png"
+                    alt=""
+                  /></a>
+              </div>
+            {{/if}}
+          {{/each}}
+        </ul>
+
+      </div>
+    </div>
+
+    <div id="dailyDiv">
+      <h1>MONTHLY</h1>
+
+      <div class="dropdown">
+        <form action="/todos/monthly" method="POST">
+          <input
+            class="addTaskInput"
+            type="text"
+            name="content"
+            placeholder=" Name your task"
+          />
+          <button class="addTaskBtn">Add task</button>
+        </form>
+
+        <ul class="unList" id="unorderedList3">
+          {{#each allTodos}}
+            {{#if (compare this.timeFormat "monthly" "===")}}
+              <div>
+                <li class="todoList">
+                  | {{content}}
+                </li>
+                <a href="/todos/{{this._id}}/delete"><img
+                    class="icons"
+                    src="/images/delete.png"
+                    alt=""
+                  /></a>
+                  <a href="/todos/{{this._id}}/update"><img
+                    class="icons"
+                    src="/images/edit.png"
+                    alt=""
+                  /></a>
+                <a href="/todos/{{this._id}}/update"><img
+                    class="icons"
+                    src="/images/done.png"
+                    alt=""
+                  /></a>
+              </div>
+            {{/if}}
+          {{/each}}
+        </ul>
+
+      </div>
+    </div>
+
+    <div id="dailyDiv">
+      <h1>OTHER</h1>
+
+      <div class="dropdown">
+        <form action="/todos/other" method="POST">
+          <input
+            class="addTaskInput"
+            type="text"
+            name="content"
+            placeholder=" Name your task"
+          />
+          <button class="addTaskBtn">Add task</button>
+        </form>
+
+        <ul class="unList" id="unorderedList4">
+          {{#each allTodos}}
+            {{#if (compare this.timeFormat "other" "===")}}
+              <div>
+                <li class="todoList">
+                  | {{content}}
+                </li>
+                <a href="/todos/{{this._id}}/delete"><img
+                    class="icons"
+                    src="/images/delete.png"
+                    alt=""
+                  /></a>
+                  <a href="/todos/{{this._id}}/update"><img
+                    class="icons"
+                    src="/images/edit.png"
+                    alt=""
+                  /></a>
+                <a href="/todos/{{this._id}}/update"><img
+                    class="icons"
+                    src="/images/done.png"
+                    alt=""
+                  /></a>
+              </div>
+            {{/if}}
+          {{/each}}
+        </ul>
+
+      </div>
+    </div> --}}
+
+
+    <div class="list-card">
+      <h1>Done Tasks</h1> 
+
+      {{#each doneTasks}}
+       
+       {{content}} | 
+       
+      {{/each}}
+
+      <a href="">empty done tasks</a>
+    </div>
+
+    </div>
+
+  </div>
+</div>

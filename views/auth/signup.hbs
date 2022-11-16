@@ -1,0 +1,42 @@
+<div class="container">
+  <div id="form">
+    <h2>Sign Up</h2>
+    <form action="/auth/signup" method="POST">
+      <div>
+        <label>
+          Username
+          <input
+            class="signLogInput"
+            type="text"
+            name="username"
+            placeholder="  your username"
+          />
+        </label></div>
+      <div><label>
+          Email
+          <input
+            class="signLogInput"
+            type="email"
+            name="email"
+            placeholder="  your email"
+          />
+        </label></div>
+      <div>
+        <label>
+          Password
+          <input
+            class="signLogInput"
+            type="password"
+            name="password"
+            placeholder="  your password"
+          />
+        </label></div>
+
+      <button type="submit">Sign Up</button>
+
+      {{#if errorMessage}}
+        <p class="error">{{errorMessage}}</p>
+      {{/if}}
+    </form>
+  </div>
+</div>
