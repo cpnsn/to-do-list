@@ -5,9 +5,14 @@ const Todo = require("../models/Todo.model");
 const router = express.Router();
 
 router.get("/", isLoggedIn, async (req, res) => {
-  const allLists = await ListTodo.find({
-    author: req.session.currentUser._id,
-  }).populate("todos");
+  const allLists = (
+    await ListTodo.find({
+      author: req.session.currentUser._id,
+    }).populate("todos")
+  ).map((list) => {
+    list.todos = list.todos.filter((todo) => !todo.done);
+    return list;
+  });
   const doneTasks = await Todo.find({
     user: req.session.currentUser._id,
     done: true,
