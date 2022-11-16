@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&display=swap");
 
 /* body {
   padding: 50px;
@@ -164,7 +165,7 @@ button:hover {
   background-color: rgb(228, 242, 219);
 }
 
-h2 {
+.h2LogSignIn {
   margin: 1em 0 1em 1em;
 }
 
@@ -258,9 +259,7 @@ h2 {
 
 .list-card {
   display: flex;
-  /* justify-content: center; */
   width: 25%;
-  /* height: 50%; */
   margin: 3em;
   margin-top: 1em;
   background-color: rgb(245, 251, 240);
@@ -271,6 +270,7 @@ h2 {
   box-shadow: 1px 2px 4px 2px rgba(41, 41, 41, 0.08);
   border-radius: 15px;
   background: #fffefe;
+  position: relative;
 }
 
 .listTitleInput {
@@ -292,10 +292,15 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 3rem;
+}
+
+#addListInput {
+  margin: 1.5em 1em 3em 2em;
 }
 
 .addListBtn {
-  margin: 1em 1em 3em 1em;
+  margin: 1.5em 1em 3em 1em;
   width: 100px;
 }
 
@@ -305,6 +310,7 @@ h2 {
   /* flex-direction: row; */
   flex-wrap: wrap;
   justify-content: center;
+  float: left;
 }
 
 .icons {
@@ -346,10 +352,11 @@ h2 {
 }
 
 h2 {
-  margin-left: 0.5em;
-  margin-top: 0.2em;
-  color: rgb(114, 110, 110);
+  margin: 0.2em 0 0.5em 0.5em;
+  color: rgb(189, 210, 175);
   font-size: 2.5rem;
+  font-family: "Barlow Condensed", sans-serif;
+  opacity: 0.5;
 }
 
 #imgHomepage {
@@ -377,14 +384,11 @@ h2 {
 }
 
 #h1HP {
-  /* font-family: "Corben", cursive; */
-  font-weight: bolder;
-  margin-top: 1.2em;
-  font-size: 3em;
-  color: rgb(114, 110, 110);
-  /* background: -webkit-linear-gradient(#dccaff), rgb(220, 254, 198);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  margin-top: 2em;
+  color: rgb(189, 210, 175);
+  font-size: 8rem;
+  font-family: "Barlow Condensed", sans-serif;
+  text-shadow: 1px 1px 2px black;
 }
 
 #h1HPDiv {
@@ -406,3 +410,24 @@ h2 {
   display: flex;
   gap: 2rem;
 }
+
+.linkStyle {
+  text-decoration: overline;
+  color: rgb(170, 188, 157);
+  position: absolute;
+  bottom: 15;
+}
+
+.linkStyle:hover {
+  color: #c9bbe3;
+}
+
+#backImg {
+  background-image: url("/images/brandi-redd-aJTiW00qqtI-unsplash.jpg");
+  background-size: 100%;
+  height: 100%;
+}
+
+/* input[type="text"]:focus {
+  border: solid black;
+} */

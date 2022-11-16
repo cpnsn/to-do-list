@@ -1,10 +1,11 @@
 <form action="/list" method="post">
   <div id="btnListsDiv">
-    <input type="text" name="title" />
+    <input class="addTaskInput" id="addListInput" type="text" name="title" />
     <div><button class="addListBtn" style="float:right">New list</button></div>
 
   </div>
 </form>
+
 <div id="listsDiv">
   {{#each allLists}}
     <div class="list-card">
@@ -56,7 +57,7 @@
             {{!-- {{/if}} --}}
           {{/each}}
         </ul>
-        <a href="/list/{{this._id}}/delete">Delete list</a>
+        <a class="linkStyle" href="/list/{{this._id}}/delete">delete list</a>
       </div>
     </div>
   {{/each}}
@@ -203,6 +204,6 @@
 
     {{/each}}
 
-    <a href="">empty done tasks</a>
+    <a class="linkStyle" href="">empty done tasks</a>
   </div>
 </div>
