@@ -32,36 +32,50 @@ router.get("/", isLoggedIn, async (req, res) => {
 
 //ajouter todo à une liste
 router.post("/:id", async (req, res, next) => {
-  const { content } = req.body;
-  const id = req.params.id;
-  const newList = await Todo.create({
-    user: req.session.currentUser._id,
-    content,
-  });
-  await ListTodo.findByIdAndUpdate(id, { $push: { todos: newList.id } });
-  res.redirect(`/todos`);
+  try {
+    const { content } = req.body;
+    const id = req.params.id;
+    const newList = await Todo.create({
+      user: req.session.currentUser._id,
+      content,
+    });
+    await ListTodo.findByIdAndUpdate(id, { $push: { todos: newList.id } });
+    res.redirect(`/todos`);
+  } catch (error) {
+    next(error);
+  }
 });
 
 //supprimer todo d'une liste
 router.get("/:id/delete", async (req, res, next) => {
-  const oneTask = await Todo.findByIdAndDelete(req.params.id);
-  res.redirect("/todos");
+  try {
+    const oneTask = await Todo.findByIdAndDelete(req.params.id);
+    res.redirect("/todos");
+  } catch (error) {
+    next(error);
+  }
 });
 
 //afficher todo done dans "done tasks"
 router.get("/:id/update", async (req, res, next) => {
-  const updateDone = await Todo.findByIdAndUpdate(req.params.id, {
-    done: true,
-  });
-  res.redirect("/todos");
+  try {
+    const updateDone = await Todo.findByIdAndUpdate(req.params.id, {
+      done: true,
+    });
+    res.redirect("/todos");
+  } catch (error) {
+    next(error);
+  }
 });
 
 //vider section "done tasks"
-router.get("/delete", async (req, res, next) => {
-  const deleteAllDone = await Todo.findByIdAndDelete(req.params.id, {
-    done: false,
-  });
-  res.redirect("/todos");
+router.get("/delete-all", async (req, res, next) => {
+  try {
+    const deleteAllDone = await Todo.deleteMany({ done: true });
+    res.redirect("/todos");
+  } catch (error) {
+    next(error);
+  }
 });
 
 // router.post("/", async (req, res, next) => {

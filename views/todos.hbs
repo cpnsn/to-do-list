@@ -201,12 +201,12 @@
     <div class="doneContainer">
       {{#each this.doneTasks}}
 
-        <div id="doneTasks">
+        <div>
           {{content}}<span id="doneSpan"> | </span>
         </div>
 
-        <a class="linkStyle" href="/todos/{{this._id}}/delete">empty done tasks</a>
       {{/each}}
+      <a class="linkStyle" href="/todos/delete-all">empty done tasks</a>
     </div>
 
   </div>

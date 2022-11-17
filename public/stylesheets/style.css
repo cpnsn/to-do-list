@@ -1,31 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&display=swap");
-
-/* body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00b7ff;
-}
-
-h1 {
-  color: 15px;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
 * {
   font-family: "M PLUS 2", sans-serif;
-  /* font-family: "Abel", sans-serif; */
   padding: 0;
   margin: 0;
 }
-
-/* main {
-  background-color: rgb(242, 246, 239);
-} */
 
 nav {
   box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.2);
@@ -59,15 +41,6 @@ li a:hover {
   background-color: rgb(192, 214, 179);
 }
 
-/* https://www.w3schools.com/css/css_navbar_horizontal.asp */
-/* .active {
-  background-color: rgb(165, 181, 161);
-} */
-
-/* label {
-  display: inline-block;
-} */
-
 .container {
   display: flex;
   justify-content: center;
@@ -89,21 +62,14 @@ li a:hover {
   padding: 10px;
   gap: 10px;
 
-  /* position: absolute; */
   width: 30%;
   height: 40%;
-  /* left: 200px;
-  top: 74px; */
-
-  /* White */
 
   background: rgb(245, 251, 240);
-  /* Gray/2px */
 
   box-shadow: 0px 2px 4px rgba(41, 41, 41, 0.08);
   border-radius: 15px;
   background: #ffffff;
-  /* Main Colors/Purple/1 */
 
   border-top: 5px solid rgb(218, 236, 206);
   border-left: 5px solid rgb(218, 236, 206);
@@ -111,25 +77,8 @@ li a:hover {
 }
 
 label {
-  /* margin-top: 30px;
-  margin-left: 30px; */
   margin: 10px 0 0 30px;
 }
-
-/* button {
-  
-  color: #fff;
-  border: 3px solid white;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1;
-  font-size: 17px;
-  background-color: transparent;
-  padding: 10px;
-  outline: none;
-  border-radius: 4px;
-} */
 
 button:hover {
   color: #001f3f;
@@ -137,21 +86,6 @@ button:hover {
 }
 
 button {
-  /* margin-left: 30px; */
-
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; */
-  /* padding: 8px 16px;
-  gap: 10px; */
-
-  /* position: absolute;
-  
-  left: 528px;
-  top: 882px; */
-
-  /* Main Colors/Purple/0.5 */
   width: 150px;
   height: 40px;
   background: #f4effe;
@@ -159,6 +93,7 @@ button {
   border: none;
   cursor: pointer;
   transition: all 0.5s ease;
+  color: rgb(114, 110, 110);
 }
 
 button:hover {
@@ -417,9 +352,9 @@ h2 {
 
 #backImg {
   background-image: url("/images/brandi-redd-aJTiW00qqtI-unsplash.jpg");
-  background-size: 140%;
+  background-size: 210%;
   height: 100%;
-  width: 60%;
+  width: 20%;
 }
 
 /* input[type="text"]:focus {
@@ -427,8 +362,9 @@ h2 {
 } */
 
 .titlesIcon {
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 1.7rem;
+  width: 1.7rem;
+  margin-left: 0.5rem;
 }
 
 .titlesIcon:hover {
@@ -445,4 +381,51 @@ h2 {
   float: left;
   gap: 1rem;
   margin-bottom: 5rem;
+}
+
+#logo {
+  width: 10rem;
+}
+
+/* #homepageDivs {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+#welcomeDiv {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#paraHP {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  color: rgb(114, 110, 110);
+}
+
+#btnHP {
+  height: 3.5rem;
+  width: 15rem;
+  color: rgb(114, 110, 110);
+  background: #ffffff;
+  border: 3px solid rgb(204, 220, 193);
+  border-radius: 8px;
+}
+
+#btnHP:hover {
+  border: 3px solid #decffb;
+}
+
+#btnHPDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
 }
