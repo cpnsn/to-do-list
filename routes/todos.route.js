@@ -56,6 +56,14 @@ router.get("/:id/update", async (req, res, next) => {
   res.redirect("/todos");
 });
 
+//vider section "done tasks"
+router.get("/delete", async (req, res, next) => {
+  const deleteAllDone = await Todo.findByIdAndDelete(req.params.id, {
+    done: false,
+  });
+  res.redirect("/todos");
+});
+
 // router.post("/", async (req, res, next) => {
 //   const { content } = req.body;
 //   const newDoneTask = await Todo.create({

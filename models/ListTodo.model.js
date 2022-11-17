@@ -1,10 +1,3 @@
-/**
- * List:
- * Title
- * author
- * [Task]
- */
-
 const { Schema, model } = require("mongoose");
 
 const listTodoSchema = new Schema({

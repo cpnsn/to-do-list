@@ -329,26 +329,21 @@ button:hover {
 }
 
 .addTaskInput {
-  /* display: flex;
-  flex-direction: row;
-  align-items: center; */
   padding: 14px;
   gap: 5px;
-  /* display: block; */
   margin: 0 auto;
   max-width: 200px;
   height: 2.8rem;
   background: #ffffff;
   border: 3px solid #decffb;
   border-radius: 8px;
-  /* flex: none; */
-  /* order: 1; */
   align-self: stretch;
-  /* flex-grow: 0; */
 }
 
-.addTaskInput {
-  /* margin-left: 2em; */
+input:focus {
+  outline: none;
+  border: 3px solid rgb(204, 220, 193);
+  border-radius: 8px;
 }
 
 h2 {
@@ -359,11 +354,11 @@ h2 {
   opacity: 0.5;
 }
 
-#imgHomepage {
+/* #imgHomepage {
   width: 80%;
-}
+} */
 
-#imgHPDiv {
+/* #imgHPDiv {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -375,13 +370,13 @@ h2 {
   border-top: 5px solid rgb(218, 236, 206);
   border-left: 5px solid rgb(218, 236, 206);
   border-radius: 15px;
-}
+} */
 
-#homepageDiv {
+/* #homepageDiv {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 #h1HP {
   margin-top: 2em;
@@ -394,10 +389,6 @@ h2 {
 #h1HPDiv {
   display: flex;
   justify-content: center;
-}
-
-#doneTasks {
-  display: inline-block;
 }
 
 .dropdown {
@@ -424,10 +415,27 @@ h2 {
 
 #backImg {
   background-image: url("/images/brandi-redd-aJTiW00qqtI-unsplash.jpg");
-  background-size: 100%;
+  background-size: 140%;
   height: 100%;
+  width: 60%;
 }
 
 /* input[type="text"]:focus {
-  border: solid black;
+  border: 10px solid #555;
 } */
+
+.titlesIcon {
+  height: 1.8rem;
+}
+
+#doneSpan {
+  color: rgb(170, 188, 157);
+}
+
+.doneContainer {
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
