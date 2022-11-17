@@ -9,8 +9,10 @@
 <div id="listsDiv">
   {{#each allLists}}
     <div class="list-card">
-      <h2>{{this.title}}
-        <a href=""><img class="titlesIcon" src="/images/edit.png" alt="" /></h2></a>
+      <div>
+        <h2 id={{this._id}}>{{this.title}}</h2>
+        <img class="titlesIcon" src="/images/edit.png" alt="" />
+      </div>
       <div class="dropdown">
         <form action="/todos/{{this._id}}" method="POST">
           <input
@@ -196,15 +198,15 @@
 
   <div class="list-card">
     <h2>Done Tasks</h2>
-<div class="doneContainer">
-    {{#each this.doneTasks}}
-      
+    <div class="doneContainer">
+      {{#each this.doneTasks}}
+
         <div id="doneTasks">
-          {{content}}<span id="doneSpan"> |  </span>
+          {{content}}<span id="doneSpan"> | </span>
         </div>
-      
-      <a class="linkStyle" href="/todos/{{this._id}}/delete">empty done tasks</a>
-    {{/each}}
+
+        <a class="linkStyle" href="/todos/{{this._id}}/delete">empty done tasks</a>
+      {{/each}}
     </div>
 
   </div>

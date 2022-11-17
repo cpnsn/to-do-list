@@ -352,6 +352,8 @@ h2 {
   font-size: 2.5rem;
   font-family: "Barlow Condensed", sans-serif;
   opacity: 0.5;
+  display: inline-block;
+  width: fit-content;
 }
 
 /* #imgHomepage {
@@ -426,6 +428,11 @@ h2 {
 
 .titlesIcon {
   height: 1.8rem;
+  width: 1.8rem;
+}
+
+.titlesIcon:hover {
+  cursor: pointer;
 }
 
 #doneSpan {

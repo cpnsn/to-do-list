@@ -9,6 +9,14 @@ router.get("/:id/delete", async (req, res, next) => {
   res.redirect("/todos");
 });
 
+//axios update list title
+router.post("/:id/update", async (req, res, next) => {
+  const { id } = req.params;
+  const { title } = req.body;
+  await ListTodo.findByIdAndUpdate(id, { title });
+  res.redirect("/todos");
+});
+
 // créer une liste
 router.post("/", async (req, res, next) => {
   const { title } = req.body;

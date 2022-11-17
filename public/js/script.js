@@ -5,29 +5,29 @@
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-const dropDownButton = document.getElementById("btn");
-const addButton = document.getElementById("add");
+// const dropDownButton = document.getElementById("btn");
+// const addButton = document.getElementById("add");
 
-addButton.addEventListener("click", handleClick);
-dropDownButton.addEventListener("click", myFunction);
-function myFunction(e) {
-  document.getElementById("myDropdown").classList.toggle("show");
-  showDropDown(e);
-}
+// addButton.addEventListener("click", handleClick);
+// dropDownButton.addEventListener("click", myFunction);
+// function myFunction(e) {
+//   document.getElementById("myDropdown").classList.toggle("show");
+//   showDropDown(e);
+// }
 
-// Close the dropdown menu if the user clicks outside of it
-function showDropDown(event) {
-  if (!event.target.matches(".dropbtn")) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
-  }
-}
+// // Close the dropdown menu if the user clicks outside of it
+// function showDropDown(event) {
+//   if (!event.target.matches(".dropbtn")) {
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains("show")) {
+//         openDropdown.classList.remove("show");
+//       }
+//     }
+//   }
+// }
 
 // const listElement1 = document.getElementById("unorderedList1");
 
@@ -60,3 +60,28 @@ function showDropDown(event) {
 //   li.textContent = document.getElementById("myInput").value;
 //   listElement4.append(li);
 // }
+
+// =========================
+
+const editBtns = document.querySelectorAll(".titlesIcon");
+
+editBtns.forEach((btn) => {
+  addEventListener("click", handleEdit);
+});
+
+async function handleEdit(event) {
+  try {
+    if (event.target.className !== "titlesIcon") return;
+
+    const h2 = event.target.parentNode.querySelector("h2");
+
+    if (!h2.getAttribute("contenteditable")) {
+      h2.setAttribute("contenteditable", "true");
+    } else {
+      h2.removeAttribute("contenteditable");
+      await axios.post(`/list/${h2.id}/update`, { title: h2.textContent });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
