@@ -22,15 +22,7 @@
             placeholder=" Name your task"
           />
           <button class="addTaskBtn">Add task</button>
-          {{! <p contenteditable="true">Hzy</p> }}
         </form>
-
-        {{! <button id="btn" class="dropbtn">Select daily habits</button>
-    <div id="myDropdown" class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div> }}
 
         <ul class="unList">
           {{#each this.todos}}
@@ -106,94 +98,6 @@
         </ul>
 
       </div>
-    </div>
-
-    <div id="dailyDiv">
-      <h1>MONTHLY</h1>
-
-      <div class="dropdown">
-        <form action="/todos/monthly" method="POST">
-          <input
-            class="addTaskInput"
-            type="text"
-            name="content"
-            placeholder=" Name your task"
-          />
-          <button class="addTaskBtn">Add task</button>
-        </form>
-
-        <ul class="unList" id="unorderedList3">
-          {{#each allTodos}}
-            {{#if (compare this.timeFormat "monthly" "===")}}
-              <div>
-                <li class="todoList">
-                  | {{content}}
-                </li>
-                <a href="/todos/{{this._id}}/delete"><img
-                    class="icons"
-                    src="/images/delete.png"
-                    alt=""
-                  /></a>
-                  <a href="/todos/{{this._id}}/update"><img
-                    class="icons"
-                    src="/images/edit.png"
-                    alt=""
-                  /></a>
-                <a href="/todos/{{this._id}}/update"><img
-                    class="icons"
-                    src="/images/done.png"
-                    alt=""
-                  /></a>
-              </div>
-            {{/if}}
-          {{/each}}
-        </ul>
-
-      </div>
-    </div>
-
-    <div id="dailyDiv">
-      <h1>OTHER</h1>
-
-      <div class="dropdown">
-        <form action="/todos/other" method="POST">
-          <input
-            class="addTaskInput"
-            type="text"
-            name="content"
-            placeholder=" Name your task"
-          />
-          <button class="addTaskBtn">Add task</button>
-        </form>
-
-        <ul class="unList" id="unorderedList4">
-          {{#each allTodos}}
-            {{#if (compare this.timeFormat "other" "===")}}
-              <div>
-                <li class="todoList">
-                  | {{content}}
-                </li>
-                <a href="/todos/{{this._id}}/delete"><img
-                    class="icons"
-                    src="/images/delete.png"
-                    alt=""
-                  /></a>
-                  <a href="/todos/{{this._id}}/update"><img
-                    class="icons"
-                    src="/images/edit.png"
-                    alt=""
-                  /></a>
-                <a href="/todos/{{this._id}}/update"><img
-                    class="icons"
-                    src="/images/done.png"
-                    alt=""
-                  /></a>
-              </div>
-            {{/if}}
-          {{/each}}
-        </ul>
-
-      </div>
     </div> --}}
 
   <div class="list-card">
@@ -206,7 +110,8 @@
         </div>
 
       {{/each}}
-      <a class="linkStyle" href="/todos/delete-all">empty done tasks</a>
+      <a id="btnDeleteDone" class="linkStyle" href="/todos/delete-all">empty
+        done tasks</a>
     </div>
 
   </div>

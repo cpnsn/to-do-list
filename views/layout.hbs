@@ -13,23 +13,21 @@
   <body>
     <nav>
       <ul class="ulNav">
-        <li class="active"><a href="/">HOME</a></li>
+        <li class="active"><a href="/">home</a></li>
         {{#unless isLoggedIn}}
-          <li class="active" style="float:right"><a href="/auth/signup">SIGN UP</a></li>
+          <li class="active" style="float:right"><a href="/auth/signup">sign up</a></li>
           <li class="active" style="float:right"><a
               href="/auth/login"
-            >LOGIN</a></li>
+            >login</a></li>
         {{/unless}}
 
         {{#if isLoggedIn}}
-          <li class="active" style="float:right"><a href="/todos">MY LISTS</a></li>
+          <li class="active" style="float:right"><a href="/todos">my lists</a></li>
           <li class="active" style="float:right">
-            <a href="/auth/logout">LOGOUT</a></li>
+            <a href="/auth/logout">logout</a></li>
         {{/if}}
       </ul>
     </nav>
-
-    <main></main>
 
     {{{body}}}
 

@@ -172,4 +172,10 @@ router.get("/logout", isLoggedIn, (req, res) => {
   });
 });
 
+//====================================
+
+// router.get("/", (req, res) => {
+//   res.render("auth/signup");
+// });
+
 module.exports = router;

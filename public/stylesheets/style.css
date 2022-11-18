@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 * {
   font-family: "M PLUS 2", sans-serif;
@@ -15,8 +15,6 @@ nav {
 
 .ulNav {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
   background-color: rgb(201, 219, 189);
   font-size: 1.2em;
@@ -29,7 +27,6 @@ li {
 li a {
   display: block;
   color: white;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   padding-left: 30px;
@@ -44,7 +41,6 @@ li a:hover {
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 #form {
@@ -130,19 +126,8 @@ button:hover {
 
 /* Dropdown Button */
 .dropbtn {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center; */
-  /* padding: 10px;
-  gap: 10px; */
-
-  /* position: absolute; */
   width: 300px;
   height: 34px;
-
-  /* left: 200px;
-  top: 128px; */
 
   background: #ffffff;
   color: rgb(132, 131, 131);
@@ -156,12 +141,6 @@ button:hover {
 .dropbtn:focus {
   background-color: rgb(250, 250, 250);
 }
-
-/* The container <div> - needed to position the dropdown content */
-/* .dropdown {
-  position: relative;
-  display: inline-block;
-} */
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
@@ -242,7 +221,6 @@ button:hover {
 #listsDiv,
 #btnListsDiv {
   display: flex;
-  /* flex-direction: row; */
   flex-wrap: wrap;
   justify-content: center;
   float: left;
@@ -291,43 +269,6 @@ h2 {
   width: fit-content;
 }
 
-/* #imgHomepage {
-  width: 80%;
-} */
-
-/* #imgHPDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-  margin-top: 3%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  box-shadow: 3px 1px 4px 2px rgba(41, 41, 41, 0.08);
-  border-top: 5px solid rgb(218, 236, 206);
-  border-left: 5px solid rgb(218, 236, 206);
-  border-radius: 15px;
-} */
-
-/* #homepageDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-#h1HP {
-  margin-top: 2em;
-  color: rgb(189, 210, 175);
-  font-size: 8rem;
-  font-family: "Barlow Condensed", sans-serif;
-  text-shadow: 1px 1px 2px black;
-}
-
-#h1HPDiv {
-  display: flex;
-  justify-content: center;
-}
-
 .dropdown {
   display: flex;
   flex-direction: column;
@@ -357,10 +298,6 @@ h2 {
   width: 20%;
 }
 
-/* input[type="text"]:focus {
-  border: 10px solid #555;
-} */
-
 .titlesIcon {
   height: 1.7rem;
   width: 1.7rem;
@@ -387,28 +324,26 @@ h2 {
   width: 10rem;
 }
 
-/* #homepageDivs {
-  display: flex;
-  flex-wrap: wrap;
-} */
-
 #welcomeDiv {
   width: 100%;
   height: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 #paraHP {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
-  font-family: "Raleway", sans-serif;
-  font-size: 2.5rem;
-  color: rgb(114, 110, 110);
+  margin-top: 4rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 3rem;
+  line-height: 5rem;
+  color: rgb(188, 185, 185);
+  opacity: 0.4;
+  text-align: center;
 }
 
 #btnHP {
@@ -427,5 +362,9 @@ h2 {
 #btnHPDiv {
   display: flex;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 8rem;
+}
+
+#btnDeleteDone {
+  margin-left: 35%;
 }

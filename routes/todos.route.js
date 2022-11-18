@@ -24,12 +24,6 @@ router.get("/", isLoggedIn, async (req, res) => {
   });
 });
 
-// router.get("/:id([a-f0-9]{24,})", async (req, res, next) => {
-//   const { id } = req.params;
-//   const oneTodo = await Todo.findById(id);
-//   res.render("oneTodo", { oneTodo });
-// });
-
 //ajouter todo à une liste
 router.post("/:id", async (req, res, next) => {
   try {
@@ -77,36 +71,5 @@ router.get("/delete-all", async (req, res, next) => {
     next(error);
   }
 });
-
-// router.post("/", async (req, res, next) => {
-//   const { content } = req.body;
-//   const newDoneTask = await Todo.create({
-//     user: req.session.currentUser._id,
-//     content,
-//     done: true,
-//   });
-//   res.redirect(`/todos`);
-// });
-
-// router.get("/:id/update", async (req, res, next) => {
-//   try {
-//     const myTask = await Todo.findById(req.params.id);
-
-//     res.render("updateTask", { myTask });
-//   } catch (error) {
-//     next(error);
-//   }
-// });
-
-// router.post("/:id/update", async (req, res, next) => {
-//   try {
-//     const updatedTask = await Todo.findByIdAndUpdate(req.params.id, req.body, {
-//       new: true,
-//     });
-//     res.redirect("/todos");
-//   } catch (error) {
-//     next(error);
-//   }
-// });
 
 module.exports = router;

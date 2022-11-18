@@ -1,30 +1,22 @@
 <div id="homepageDivs">
-  {{!-- <div id="backImg">
-    {{! <div id="h1HPDiv"><h1 id="h1HP">WELCOME</h1></div> }}
-  </div> --}}
 
   <div id="welcomeDiv">
     <img id="logo" src="/images/logo.png" alt="" />
   </div>
 
   <div>
-    <p id="paraHP">Sign up to Todo and create all the
+    <p id="paraHP">SIGN UP TO TODO AND CREATE ALL THE
       <br />
-      to-do lists you need to stay organized!</p>
+      TO-DO LISTS YOU NEED TO STAY ORGANIZED!</p>
   </div>
 
   <div id="btnHPDiv">
-    <button id="btnHP">
-      CREATE YOUR FIRST TODO LIST!
-    </button>
+    <form action="/auth/signup" method="get">
+      <button id="btnHP">
+        CREATE YOUR FIRST TODO LIST!
+      </button>
+    </form>
+
   </div>
 
 </div>
-
-{{! <div id="homepageDiv">
-    <div id="imgHPDiv"><img
-        id="imgHomepage"
-        src="/images/home page.png"
-        alt=""
-      /></div>
-  </div> }}
